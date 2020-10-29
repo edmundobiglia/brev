@@ -1,0 +1,93 @@
+.my-articles-page {
+    padding: $padding-m $padding-s;
+
+    @media (min-width: 790px) {
+        padding: $padding-xl $padding-s;
+    }
+
+    &__title {
+        align-items: center;
+        display: flex;
+        font-size: $font-h1;
+        justify-content: space-between;
+        margin: 0 0 $margin-m 0;
+    }
+
+    &__title-icon {
+        fill: $primary;
+        margin-right: $margin-s;
+        width: 2.7rem;
+        flex-shrink: 0;
+    }
+
+    &__no-articles {
+        background: white;
+        border-radius: 0.3rem;
+        color: $dark-grey;
+        font-size: $font-p;
+        padding: $padding-s;
+
+        a {
+            color: $primary;
+            transition: color 120ms ease;
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+
+    &__no-more-articles {
+        @extend .my-articles-page__no-articles;
+        background: none;
+        margin-top: $margin-s;
+        padding: $padding-s 0;
+    }
+
+    &__article-list {
+        list-style-type: none;
+    }
+
+    &__item-link {
+        display: block;
+        & + & {
+            margin-top: $margin-s;
+        }
+    }
+
+    &__article-list-item {
+        align-items: center;
+        background: white;
+        border-radius: 0 0.3rem 0.3rem 0;
+        border-left: 0rem solid transparent;
+        cursor: pointer;
+        display: flex;
+        font-size: $font-h3;
+        font-weight: 700;
+        justify-content: space-between;
+        line-height: 1.5;
+        padding: $padding-s;
+        transition: color 90ms ease, border 240ms ease;
+
+        &:hover {
+            color: $primary;
+            border-left: 0.6rem solid $secondary;
+
+            & .my-articles-page__item-icon {
+                fill: $secondary;
+            }
+        }
+    }
+
+    &__item-icon {
+        display: none;
+
+        @media (min-width: 500px) {
+            display: block;
+            fill: $primary;
+            height: 3rem;
+            margin-left: $margin-s;
+            transition: fill 120ms ease;
+            flex-shrink: 0;
+        }
+    }
+}

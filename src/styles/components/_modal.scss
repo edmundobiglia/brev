@@ -1,0 +1,42 @@
+.modal {
+    align-items: center;
+    background: rgba(65, 65, 65, 0.3);
+    display: flex;
+    justify-content: center;
+    left: 0;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 5000;
+    padding: $padding-s;
+
+    &__box {
+        background: white;
+        padding: $padding-m;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 51rem;
+        border-radius: 0 0 0.3rem 0.3rem;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+        text-align: center;
+        border-top: 0.6rem solid $primary;
+
+        @media (min-width: 790px) {
+            min-width: 51rem;
+        }
+    }
+
+    &__icon {
+        width: 2.4rem;
+        fill: $primary;
+    }
+
+    &__message {
+        margin: $margin-s 0;
+        font-size: $font-p;
+        line-height: 2;
+    }
+}

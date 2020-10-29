@@ -1,0 +1,28 @@
+// Normalize
+@import-normalize;
+
+// Base
+@import "./base/settings";
+@import "./base/base";
+@import "./base/fonts";
+
+// General styles
+@import "./general/container";
+@import "./general/button";
+@import "./general/dropdown";
+@import "./general/scrollbar";
+
+// Component styles
+@import "./components/header";
+@import "./components/not-found-page";
+@import "./components/editor";
+@import "./components/article-listing-page";
+@import "./components/author-profile-page";
+@import "./components/my-articles-page";
+@import "./components/editor-page";
+@import "./components/loader";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/snackbar";
+@import "./components/author-article-listing-page";
+@import "./components/read-article-page";

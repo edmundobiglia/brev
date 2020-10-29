@@ -1,0 +1,342 @@
+.editor {
+    box-shadow: 0 0 $padding-xs rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__featured-image {
+        align-items: center;
+        background-image: url("/images/placeholder-image.jpg");
+        background-position: center bottom;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        padding: $padding-xl $padding-s;
+        width: 100%;
+    }
+
+    &__styles-container {
+        align-items: center;
+        background: white;
+        border-bottom: 0.3rem solid $light-grey;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: sticky;
+        top: $header-offset;
+        z-index: 999;
+    }
+
+    &__style-button {
+        background: white;
+        display: block;
+        padding: 0;
+        transition: background 150ms ease;
+
+        &:hover {
+            .editor__icon {
+                fill: $secondary;
+            }
+        }
+    }
+
+    &__active-button {
+        .editor__icon {
+            fill: $primary;
+        }
+    }
+
+    &__icon {
+        display: block;
+        fill: $dark-grey;
+        height: 4.8rem;
+        transition: fill 150ms ease;
+        width: 4.8rem;
+    }
+
+    &__article-title {
+        color: $dark-grey;
+        display: block;
+        font-family: "Raleway", sans-serif;
+        font-size: $font-h1;
+        font-weight: 700;
+        line-height: 1.5;
+        padding: $padding-m $padding-s 0;
+        resize: none;
+        width: 100%;
+
+        @media (min-width: 790px) {
+            padding: $padding-l $padding-xl 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $dark-grey;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            opacity: 0.6;
+        }
+    }
+
+    &__block-set-container {
+        background: #fff;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__block-set-dropdown {
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+        left: 0;
+        position: absolute;
+        top: 100%;
+        z-index: -1;
+    }
+
+    &__actions-container {
+        position: fixed;
+        height: 6.2rem;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__action-button {
+        width: 3.6rem;
+        height: 3.6rem;
+        padding: 0.8rem;
+        flex-shrink: 0;
+        background: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        transition: background 120ms ease, border 120ms ease;
+
+        &.publish {
+            padding: 0.7rem;
+        }
+
+        & + & {
+            margin-left: $margin-s;
+        }
+
+        &:hover {
+            background: $secondary;
+            border: 1px solid $secondary;
+        }
+    }
+
+    &__action-icon {
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+
+    .DraftEditor-root {
+        background: white;
+        color: $dark-grey;
+        font-family: "Raleway", sans-serif;
+        font-size: $font-p;
+        font-weight: 400;
+        flex: 1;
+        padding: $padding-m $padding-s;
+
+        @media (min-width: 790px) {
+            padding: $padding-m $padding-xl;
+        }
+    }
+    .block-style {
+        &__paragraph {
+            line-height: 1.75;
+            margin: $margin-s 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__blockquote {
+            background: $light-grey;
+            border-left: 3px solid $primary;
+            line-height: 1.75;
+            padding: $padding-s;
+            position: relative;
+            font-size: $font-p;
+            margin: $margin-s 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__h1 {
+            font-size: $font-h1;
+            margin: $margin-s 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__h2 {
+            font-size: $font-h2;
+            margin: $margin-s 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__h3 {
+            font-size: $font-h3;
+            margin: $margin-s 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__a {
+            color: $primary;
+            text-decoration: underline;
+        }
+
+        &__unordered-list-item {
+            font-size: $font-p;
+            line-height: 1.75;
+            padding-left: 2.7rem;
+            position: relative;
+            list-style-type: none;
+
+            &:before {
+                background: $primary;
+                border-radius: 50%;
+                content: "";
+                height: 0.6rem;
+                left: 0.3rem;
+                position: absolute;
+                top: 1.1rem;
+                width: 0.6rem;
+            }
+        }
+
+        &__ordered-list-item {
+            counter-increment: custom;
+            font-size: $font-p;
+            line-height: 1.75;
+            padding-left: 2.7rem;
+            position: relative;
+            list-style-type: none;
+
+            &::before {
+                content: counter(custom);
+                font-weight: bold;
+                position: absolute;
+                top: 0rem;
+                left: 0;
+                font-size: $font-p;
+                color: $primary;
+                left: 0.3rem;
+            }
+        }
+    }
+
+    .public-DraftEditorPlaceholder-root {
+        position: relative;
+    }
+
+    .DraftEditor-editorContainer {
+        ul,
+        ol {
+            margin: $margin-s 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        ol {
+            counter-reset: custom;
+        }
+    }
+
+    .public-DraftEditorPlaceholder-inner {
+        color: $dark-grey;
+        opacity: 0.6;
+        pointer-events: none;
+        position: absolute;
+        top: 0.5rem;
+    }
+}
+
+.url-prompt {
+    background: white;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    display: flex;
+    padding: 0.6rem;
+    position: fixed;
+
+    &__input {
+        align-items: center;
+        background: $light-grey;
+        border-radius: 0.3rem;
+        color: $dark-grey;
+        display: flex;
+        flex: 1;
+        font-size: 1.5rem;
+        padding: $padding-xs / 2;
+
+        &::placeholder {
+            font-size: 1.5rem;
+            padding-left: 0.3rem;
+        }
+    }
+
+    &__button {
+        align-items: center;
+        background: white;
+        display: flex;
+        justify-content: center;
+        margin-left: 0.6rem;
+        width: 3rem;
+
+        &:hover svg {
+            fill: $primary;
+        }
+
+        &:nth-child(3) svg {
+            height: 1.2rem;
+        }
+    }
+
+    &__icon {
+        height: 1.8rem;
+    }
+}
+
+.creating-article {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-size: $font-h3;
+    font-weight: 400;
+    justify-content: center;
+    width: 100%;
+
+    &__loader {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}

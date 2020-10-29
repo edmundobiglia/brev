@@ -1,0 +1,39 @@
+.footer {
+    background: $primary;
+    border-top: 0.15rem solid $secondary;
+    padding: 2.7rem $padding-s;
+    font-size: $font-s;
+    letter-spacing: 0.045rem;
+    color: white;
+
+    &__inner-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        line-height: 2;
+        @media (min-width: 750px) {
+            flex-direction: row;
+            line-height: 1;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        list-style-type: none;
+    }
+
+    &__nav-item {
+        color: white;
+        cursor: pointer;
+        display: block;
+        transition: color 120ms ease;
+
+        &:hover {
+            color: $secondary;
+        }
+        & + & {
+            margin-left: $margin-s;
+        }
+    }
+}

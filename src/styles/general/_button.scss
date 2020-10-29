@@ -1,0 +1,39 @@
+.button {
+    background: $primary;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+    min-width: 12rem;
+    padding: $padding-xs $padding-s;
+    text-transform: uppercase;
+    transition: background 200ms ease, color 200ms ease, border 200ms ease;
+
+    &__container {
+        display: flex;
+    }
+
+    & + & {
+        margin-left: $margin-s;
+    }
+
+    &:hover {
+        background: #ff5759;
+    }
+
+    &--transparent {
+        background: none;
+        color: $primary;
+        border: 1px solid $primary;
+
+        &:hover {
+            background: $secondary;
+            color: white;
+            border: 1px solid transparent;
+        }
+    }
+}
