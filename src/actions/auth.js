@@ -6,8 +6,13 @@ export const logout = () => ({
   type: "LOGOUT",
 });
 
+const emptyAuthorArticles = () => ({
+  type: "EMPTY_AUTHOR_ARTICLES",
+});
+
 export const startLogout = () => {
-  return () => {
+  return (dispatch) => {
+    dispatch(emptyAuthorArticles());
     return firebase.auth().signOut();
   };
 };
