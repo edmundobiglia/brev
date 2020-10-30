@@ -5,7 +5,6 @@ import { CSSTransition } from "react-transition-group";
 import Dropdown from "./Dropdown";
 import { login } from "../actions/auth";
 import Icon from "./icons/Icon";
-
 import logo from "../images/brev_logo.svg";
 
 const Header = () => {
