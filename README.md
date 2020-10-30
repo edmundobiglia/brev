@@ -1,6 +1,6 @@
 # BREV
 
-**BREV** is a simple blog app.
+**BREV** is a simple blog app. 📝
 
 <img src="./gifs/Intro.gif?raw=true" width="100%" height="auto" style="border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.2)">
 
