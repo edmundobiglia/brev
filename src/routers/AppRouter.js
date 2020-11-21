@@ -16,7 +16,6 @@ import AuthorArticleListingPage from "../components/pages/AuthorArticleListingPa
 export const history = createBrowserHistory();
 
 const AppRouter = () => {
-  console.log("16h09");
   return (
     <Router history={history}>
       <div>
@@ -24,37 +23,17 @@ const AppRouter = () => {
         <div className="container--routes">
           <ScrollToTop />
           <Switch>
+            <Route path="/" component={ArticleListingPage} exact={true} />
+            <Route path="/read/:articleId" component={ReadArticlePage} exact={true} />
             <Route
-              path={process.env.PUBLIC_URL + "/"}
-              component={ArticleListingPage}
-              exact={true}
-            />
-            <Route
-              path={process.env.PUBLIC_URL + "/read/:articleId"}
-              component={ReadArticlePage}
-              exact={true}
-            />
-            <Route
-              path={process.env.PUBLIC_URL + "/author/:authorId"}
+              path="/author/:authorId"
               component={AuthorArticleListingPage}
               exact={true}
             />
-            <PrivateRoute
-              path={process.env.PUBLIC_URL + "/articles"}
-              component={MyArticlesPage}
-            />
-            <PrivateRoute
-              path={process.env.PUBLIC_URL + "/write"}
-              component={CreateArticlePage}
-            />
-            <PrivateRoute
-              path={process.env.PUBLIC_URL + "/edit/:articleId"}
-              component={EditArticlePage}
-            />
-            <PrivateRoute
-              path={process.env.PUBLIC_URL + "/profile"}
-              component={AuthorProfilePage}
-            />
+            <PrivateRoute path="/articles" component={MyArticlesPage} />
+            <PrivateRoute path="/write" component={CreateArticlePage} />
+            <PrivateRoute path="/edit/:articleId" component={EditArticlePage} />
+            <PrivateRoute path="/profile" component={AuthorProfilePage} />
             <Route component={NotFoundPage} />
           </Switch>
         </div>
