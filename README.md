@@ -2,7 +2,7 @@
 
 **BREV** is a simple blog app. 📝
 
-<img src="./gifs/Intro.gif?raw=true" width="100%" height="auto" style="border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.2)">
+<img src="./readme_images/Intro.gif?raw=true" width="100%" height="auto">
 
 ## 📄 Description
 
@@ -40,12 +40,12 @@ The app's core technolgies are:
 
 ### 🏠 Home
 
-<img src="./gifs/Home.gif?raw=true" width="100%" height="auto" style="border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.2); margin-bottom: 15px">
+<img src="./readme_images/Home.gif?raw=true" width="100%" height="auto">
 
 ### ✏️ Editor
 
-<img src="./gifs/Editor.gif?raw=true" width="100%" height="auto" style="border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.2); margin-bottom: 20px">
+<img src="./readme_images/Editor.gif?raw=true" width="100%" height="auto" >
 
 ### 👤 Author Profile
 
-<img src="./gifs/Profile.gif?raw=true" width="100%" height="auto" style="border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.2); margin-bottom: 20px">
+<img src="./readme_images/Profile.gif?raw=true" width="100%" height="auto" >
