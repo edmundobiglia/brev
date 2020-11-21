@@ -23,17 +23,37 @@ const AppRouter = () => {
         <div className="container--routes">
           <ScrollToTop />
           <Switch>
-            <Route path="/" component={ArticleListingPage} exact={true} />
-            <Route path="/read/:articleId" component={ReadArticlePage} exact={true} />
             <Route
-              path="/author/:authorId"
+              path={process.env.PUBLIC_URL + "/"}
+              component={ArticleListingPage}
+              exact={true}
+            />
+            <Route
+              path={process.env.PUBLIC_URL + "/read/:articleId"}
+              component={ReadArticlePage}
+              exact={true}
+            />
+            <Route
+              path={process.env.PUBLIC_URL + "/author/:authorId"}
               component={AuthorArticleListingPage}
               exact={true}
             />
-            <PrivateRoute path="/articles" component={MyArticlesPage} />
-            <PrivateRoute path="/write" component={CreateArticlePage} />
-            <PrivateRoute path="/edit/:articleId" component={EditArticlePage} />
-            <PrivateRoute path="/profile" component={AuthorProfilePage} />
+            <PrivateRoute
+              path={process.env.PUBLIC_URL + "/articles"}
+              component={MyArticlesPage}
+            />
+            <PrivateRoute
+              path={process.env.PUBLIC_URL + "write"}
+              component={CreateArticlePage}
+            />
+            <PrivateRoute
+              path={process.env.PUBLIC_URL + "edit/:articleId"}
+              component={EditArticlePage}
+            />
+            <PrivateRoute
+              path={process.env.PUBLIC_URL + "profile"}
+              component={AuthorProfilePage}
+            />
             <Route component={NotFoundPage} />
           </Switch>
         </div>
