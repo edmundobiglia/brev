@@ -9,7 +9,11 @@ const PrivateRoute = memo(({ component: Component, ...rest }) => {
     <Route
       {...rest}
       render={(routeProps) =>
-        isAuthenticated ? <Component {...routeProps} /> : <Redirect to="/" />
+        isAuthenticated ? (
+          <Component {...routeProps} />
+        ) : (
+          <Redirect to={process.env.PUBLIC_URL + "/"} />
+        )
       }
     />
   );
