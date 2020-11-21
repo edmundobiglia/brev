@@ -17,7 +17,7 @@ export const history = createBrowserHistory();
 
 const AppRouter = () => {
   return (
-    <Router history={history}>
+    <Router history={history} basename={process.env.PUBLIC_URL}>
       <div>
         <Header />
         <div className="container--routes">
