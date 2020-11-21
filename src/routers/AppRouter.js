@@ -16,7 +16,6 @@ import AuthorArticleListingPage from "../components/pages/AuthorArticleListingPa
 export const history = createBrowserHistory();
 
 const AppRouter = () => {
-  console.log("routere");
   return (
     <Router history={history}>
       <div>
