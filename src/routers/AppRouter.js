@@ -13,7 +13,9 @@ import ArticleListingPage from "../components/pages/ArticleListingPage";
 import ReadArticlePage from "../components/pages/ReadArticlePage";
 import AuthorArticleListingPage from "../components/pages/AuthorArticleListingPage";
 
-export const history = createBrowserHistory();
+export const history = createBrowserHistory({
+  basename: process.env.PUBLIC_URL,
+});
 
 const AppRouter = () => {
   return (
