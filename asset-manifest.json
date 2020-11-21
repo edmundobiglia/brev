@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/brev/static/css/main.96c54916.chunk.css",
-    "main.js": "/brev/static/js/main.6d7ef405.chunk.js",
-    "main.js.map": "/brev/static/js/main.6d7ef405.chunk.js.map",
+    "main.js": "/brev/static/js/main.b7f8589c.chunk.js",
+    "main.js.map": "/brev/static/js/main.b7f8589c.chunk.js.map",
     "runtime-main.js": "/brev/static/js/runtime-main.326b298a.js",
     "runtime-main.js.map": "/brev/static/js/runtime-main.326b298a.js.map",
     "static/js/2.d7d38d06.chunk.js": "/brev/static/js/2.d7d38d06.chunk.js",
     "static/js/2.d7d38d06.chunk.js.map": "/brev/static/js/2.d7d38d06.chunk.js.map",
     "index.html": "/brev/index.html",
-    "precache-manifest.4fb5dcccc0b1d53b7a21b52f9f5f1e49.js": "/brev/precache-manifest.4fb5dcccc0b1d53b7a21b52f9f5f1e49.js",
+    "precache-manifest.99d700dca70c809f1c3cb0125d3f826c.js": "/brev/precache-manifest.99d700dca70c809f1c3cb0125d3f826c.js",
     "service-worker.js": "/brev/service-worker.js",
     "static/css/main.96c54916.chunk.css.map": "/brev/static/css/main.96c54916.chunk.css.map",
     "static/js/2.d7d38d06.chunk.js.LICENSE.txt": "/brev/static/js/2.d7d38d06.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.326b298a.js",
     "static/js/2.d7d38d06.chunk.js",
     "static/css/main.96c54916.chunk.css",
-    "static/js/main.6d7ef405.chunk.js"
+    "static/js/main.b7f8589c.chunk.js"
   ]
 }
