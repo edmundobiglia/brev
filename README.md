@@ -1,4 +1,4 @@
-<p align="right"><img src="./gifs/Editor.gif?raw=true" width="100%" height="auto"><br/><sup>✏ <i>Editor</i> page</sup>&emsp;&emsp;</p>
+<p align="right"><img src="./gifs/Editor.gif?raw=true" width="100%" height="auto"></p>
 
 ## 📄 BREV
 
@@ -34,6 +34,6 @@ The app's core technolgies are:
 
 ## 🖼️ Other Gifs
 
-<p align="right"><img src="./gifs/Home.gif?raw=true" width="100%" height="auto"><br/><sup>🏠 <i>Home</i> page</sup>&emsp;&emsp;</p>
+<p align="right"><img src="./gifs/Home.gif?raw=true" width="100%" height="auto"></p>
 
-<p align="right"><img src="./gifs/Profile.gif?raw=true" width="100%" height="auto" ><br/><sup>👤 <i>Author Profile</i> page</sup>&emsp;&emsp;</p>
+<p align="right"><img src="./gifs/Profile.gif?raw=true" width="100%" height="auto" ></p>
