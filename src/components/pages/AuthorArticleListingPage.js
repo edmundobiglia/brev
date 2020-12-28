@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { db } from "../../firebase/firebase";
 import useGetArticles from "../../hooks/useGetArticles";
-import { setAuthorArticles, setAuthorLastVisibleArticle } from "../../actions/authorArticles";
-// import { setLastVisibleArticle } from "../../actions/articles";
+import {
+  setAuthorArticles,
+  setAuthorLastVisibleArticle,
+} from "../../actions/authorArticles";
 import ArticleListItem from "../ArticleListItem";
 import Loader from "../Loader";
 import Footer from "../Footer";
@@ -29,7 +31,9 @@ const AuthorArticleListingPage = ({ match }) => {
     .orderBy("articleTimePublished", "desc")
     .limit(4);
 
-  const lastVisibleArticle = useSelector((state) => state.authorArticles.lastVisibleArticle);
+  const lastVisibleArticle = useSelector(
+    (state) => state.authorArticles.lastVisibleArticle
+  );
   const articleList = useSelector((state) => state.authorArticles.articles);
 
   const [loading, error, hasMore, getArticles] = useGetArticles(
@@ -67,7 +71,7 @@ const AuthorArticleListingPage = ({ match }) => {
 
   useEffect(() => {
     getArticles();
-  }, []); // eslint-disable-line
+  }, [authorId]); // eslint-disable-line
 
   return (
     <div className="author-article-listing-page">
@@ -105,7 +109,11 @@ const AuthorArticleListingPage = ({ match }) => {
             .filter((article) => article.articleIsPublished)
             .map((article, index, array) =>
               index === array.length - 1 ? (
-                <ArticleListItem key={article.articleId} article={article} lastArticleRef={lastArticleRef} />
+                <ArticleListItem
+                  key={article.articleId}
+                  article={article}
+                  lastArticleRef={lastArticleRef}
+                />
               ) : (
                 <ArticleListItem key={article.articleId} article={article} />
               )
