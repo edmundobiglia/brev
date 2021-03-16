@@ -6,7 +6,7 @@ It has a global public page with all of the published entries. The app allows yo
 
 Being my first React app, it was an interesting challenge which helped me grasp many React concepts and also understand the importance of best practices, clean code and architecture.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 The app's core technolgies are:
 
@@ -14,7 +14,7 @@ The app's core technolgies are:
 - **Firebase** for authentication and database
 - **Draft.js** for the blog rich-text editor. Instead of choosing a rich-text editor with built-in formatting functionality, I went with Draft.js, which is not so "rich" and quite rudimentary out of the box, requiring a lot of configuration and customization. Its API proved to be pretty tricky, but it was interesting to explore it and get to understand how it works.
 
-## ✅ Full Dependency List
+## Full Dependency List
 
 - React
 - React Router
